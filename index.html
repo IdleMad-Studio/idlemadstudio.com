@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IdleMad Studio</title>
+<meta name="description" content="IdleMad Studio makes private, offline apps for Android, starting with ListenEasy, an offline text-to-speech engine.">
+<meta name="color-scheme" content="dark">
+<style>
+  :root {
+    --bg: #101419;
+    --card: #1B222B;
+    --line: #28313C;
+    --text: #E8EEF5;
+    --muted: #B6C1CF;
+    --accent: #9DC4FF;
+    --wave: #FBBF24;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  a { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 88px 0 56px; }
+  .mark { font-size: 15px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--wave); margin: 0 0 16px; }
+  h1 { font-size: clamp(34px, 7vw, 56px); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 18px; }
+  .lede { font-size: 19px; color: var(--muted); max-width: 56ch; margin: 0; }
+  section { padding: 40px 0 56px; border-top: 1px solid var(--line); }
+  h2 { font-size: 15px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; }
+  .app {
+    display: flex; gap: 20px; align-items: center;
+    background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+    padding: 20px; color: var(--text); text-decoration: none;
+    transition: border-color 0.15s;
+  }
+  .app:hover { border-color: var(--accent); }
+  .app svg { width: 72px; height: 72px; flex: none; }
+  .app h3 { font-size: 21px; margin: 0 0 4px; }
+  .app p { margin: 0; color: var(--muted); font-size: 16px; }
+  .app .more { display: inline-block; margin-top: 8px; color: var(--accent); font-size: 15px; font-weight: 600; }
+  footer { padding: 32px 0 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
+  footer p { margin: 0 0 6px; }
+  @media (max-width: 480px) {
+    .app { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <p class="mark">IdleMad Studio</p>
+  <h1>Small, private apps for Android.</h1>
+  <p class="lede">We make apps that do one job well and keep your information on your own device:
+    no accounts, no ads and no tracking.</p>
+</header>
+
+<main>
+  <section class="wrap" aria-labelledby="apps">
+    <h2 id="apps">Apps</h2>
+    <a class="app" href="listeneasy/">
+      <svg viewBox="0 0 108 108" aria-hidden="true">
+        <rect width="108" height="108" rx="24" fill="#3730A3"/>
+        <path d="M28 62V54a26 26 0 0 1 52 0v8" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+        <rect x="22" y="58" width="14" height="22" rx="5" fill="#fff"/>
+        <rect x="72" y="58" width="14" height="22" rx="5" fill="#fff"/>
+        <path d="M47 50v10M54 44v22M61 50v10" stroke="#FBBF24" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h3>ListenEasy</h3>
+        <p>An offline text-to-speech engine with natural English voices. Reads books, articles and
+          notes aloud without sending your text anywhere.</p>
+        <span class="more">About ListenEasy →</span>
+      </div>
+    </a>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Contact: <a href="mailto:contact@idlemadstudio.com">contact@idlemadstudio.com</a></p>
+  <p>© 2026 IdleMad Studio</p>
+</footer>
+</body>
+</html>
