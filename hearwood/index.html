@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hearwood</title>
+<meta name="description" content="Hearwood is a Windows app that reads text aloud. Select text in any app, press a hotkey, and natural voices read it on your own PC, with no cloud service and no data collection.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%2334A88C'/%3E%3Cstop offset='1' stop-color='%23145448'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='108' height='108' rx='24' fill='url(%23g)'/%3E%3Cg fill='%23fff'%3E%3Crect x='21.5' y='43' width='8' height='22' rx='4'/%3E%3Crect x='35.8' y='32.5' width='8' height='43' rx='4'/%3E%3Crect x='50' y='21.5' width='8' height='65' rx='4'/%3E%3Crect x='64.2' y='32.5' width='8' height='43' rx='4'/%3E%3Crect x='78.5' y='43' width='8' height='22' rx='4'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="../site.css">
+<style>
+  /* Hearwood's cedar green in place of the studio accent. */
+  :root { --accent: #1F7A66; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #3FB497; } }
+</style>
+</head>
+<body>
+<div class="top wrap">
+  <a class="studio" href="../">IdleMad Studio</a>
+  <nav aria-label="Page">
+    <a href="#features">Features</a>
+    <a href="#setup">Setup</a>
+    <a href="privacy-policy.html">Privacy</a>
+  </nav>
+</div>
+
+<header class="hero split wrap">
+  <div>
+    <div class="brand">
+      <svg viewBox="0 0 108 108" aria-hidden="true">
+        <defs><linearGradient id="hw-tile" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34A88C"/><stop offset="1" stop-color="#145448"/></linearGradient></defs>
+        <rect width="108" height="108" rx="24" fill="url(#hw-tile)"/>
+        <g fill="#fff"><rect x="21.5" y="43" width="8" height="22" rx="4"/><rect x="35.8" y="32.5" width="8" height="43" rx="4"/><rect x="50" y="21.5" width="8" height="65" rx="4"/><rect x="64.2" y="32.5" width="8" height="43" rx="4"/><rect x="78.5" y="43" width="8" height="22" rx="4"/></g>
+      </svg>
+      <span>Hearwood</span>
+    </div>
+    <h1>Select any text on your PC and hear it, <em>right there</em>.</h1>
+    <p class="lede">Hearwood is a small Windows app that reads text aloud. Select text in any app and
+      press Ctrl+Alt+S: natural voices read it on your own PC, with no cloud service and nothing
+      sent anywhere.</p>
+    <ul class="facts">
+      <li>Works offline, with the voices on your PC</li>
+      <li>No accounts, ads or analytics</li>
+      <li>Coming soon to the Microsoft Store</li>
+    </ul>
+  </div>
+
+  <figure class="reader" id="reader">
+    <blockquote id="passage">The Mole had been working very hard all the morning, spring-cleaning
+      his little home. First with brooms, then with dusters; then on ladders and steps and chairs,
+      with a brush and a pail of whitewash; till he had dust in his throat and eyes, and splashes of
+      whitewash all over his black fur, and an aching back and weary arms.</blockquote>
+    <figcaption>
+      <button type="button" id="toggle" aria-pressed="false" aria-label="Play the highlighting illustration" hidden>
+        <svg class="i-play" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11l9-5.5z"/></svg>
+        <svg class="i-pause" viewBox="0 0 14 14" aria-hidden="true"><path d="M2.5 1.5h3v11h-3zM8.5 1.5h3v11h-3z"/></svg>
+      </button>
+      <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>How Hearwood's window highlights each word as it is read. An illustration only: this
+        page plays no audio.</span>
+    </figcaption>
+  </figure>
+</header>
+
+<main>
+  <section class="section wrap" aria-labelledby="features">
+    <h2 id="features">What it does</h2>
+    <dl class="features">
+      <div>
+        <dt>Read from any app</dt>
+        <dd>Select text in a browser, a document or an email and press <strong>Ctrl+Alt+S</strong>.
+          Hearwood reads it without opening a window, and puts your clipboard back as it was.</dd>
+      </div>
+      <div>
+        <dt>Change speed as it reads</dt>
+        <dd>From 0.75× to 3×, with the same pitch, from the window or with
+          <strong>Ctrl+Alt+Up</strong> and <strong>Down</strong>.</dd>
+      </div>
+      <div>
+        <dt>Word highlighting</dt>
+        <dd>Hearwood's window shows what is being read and highlights each word as you hear it.</dd>
+      </div>
+      <div>
+        <dt>Fifteen voices</dt>
+        <dd>American and British, female and male, each named after a tree: Willow, Rowan, Hazel,
+          Linden and more.</dd>
+      </div>
+      <div>
+        <dt>Your own hotkeys</dt>
+        <dd>Change the keys for reading, stopping and speed with <strong>Change Hotkeys</strong>, in
+          the window or the tray menu.</dd>
+      </div>
+      <div>
+        <dt>Out of your way</dt>
+        <dd>Hearwood lives in the notification area. Its menu speaks the clipboard, pauses, stops,
+          and switches voice or speed.</dd>
+      </div>
+      <div>
+        <dt>Start with Windows</dt>
+        <dd>Optional: Hearwood can start in the notification area when you sign in, ready for the
+          hotkey.</dd>
+      </div>
+      <div>
+        <dt>Light and dark</dt>
+        <dd>Follows your Windows color setting, and stays sharp at any display scale.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="section wrap" aria-labelledby="setup">
+    <h2 id="setup">Getting started</h2>
+    <ol class="steps">
+      <li><span>Install Hearwood from the Microsoft Store and open it. Its icon appears in the
+        notification area.</span></li>
+      <li><span>Select text in any app and press <strong>Ctrl+Alt+S</strong>. Or type or paste text
+        into Hearwood's window and press <strong>Speak</strong>.</span></li>
+      <li><span>Choose a voice and speed at the top of the window. To use other keys, click
+        <strong>Change Hotkeys</strong>.</span></li>
+    </ol>
+  </section>
+
+  <section class="section wrap" aria-labelledby="privacy">
+    <h2 id="privacy">Private by design</h2>
+    <p>Speech is made on your PC by a model that comes with the app, so Hearwood works without an
+      internet connection, and the text it reads is never sent anywhere or saved. Its settings stay
+      on your PC. Read the full <a href="privacy-policy.html">privacy policy</a>.</p>
+  </section>
+
+  <section class="section wrap" aria-labelledby="requirements">
+    <h2 id="requirements">Requirements</h2>
+    <p>Windows 10 (version 1809 or later) or Windows 11, on an x64 or Arm64 PC, with about 375 MB of
+      free space. On x64 PCs the processor needs AVX2, which most made since 2015 have; without it,
+      Hearwood says that it can't run.</p>
+  </section>
+</main>
+
+<footer class="foot wrap">
+  <nav aria-label="Site">
+    <a href="../">IdleMad Studio</a>
+    <a href="privacy-policy.html">Privacy policy</a>
+    <a href="mailto:contact@idlemadstudio.com">Contact</a>
+  </nav>
+  <p>Hearwood is copyright © 2026 IdleMad Studio. Its speech model is Kyutai's Pocket TTS (CC BY 4.0),
+    run with Gradium's xn-ptts, and its voices are blends of Kokoro-82M voices by hexgrad
+    (Apache-2.0).</p>
+  <p>Sample text from <cite>The Wind in the Willows</cite> by Kenneth Grahame (public domain).</p>
+</footer>
+
+<script>
+(function () {
+  var passage = document.getElementById('passage');
+  var reader = document.getElementById('reader');
+  var button = document.getElementById('toggle');
+  var words = passage.textContent.trim().split(/\s+/);
+  passage.textContent = '';
+  var spans = words.map(function (word, i) {
+    var span = document.createElement('span');
+    span.className = 'w';
+    span.textContent = word;
+    passage.appendChild(span);
+    if (i < words.length - 1) passage.appendChild(document.createTextNode(' '));
+    return span;
+  });
+
+  var index = -1, timer = null;
+  function step() {
+    if (index >= 0) spans[index].classList.remove('on');
+    index = (index + 1) % spans.length;
+    spans[index].classList.add('on');
+    var word = words[index];
+    var wait = 150 + 50 * word.length;
+    if (/[,:;]\W*$/.test(word)) wait += 250;
+    if (/[.?!]\W*$/.test(word)) wait += 900;
+    timer = setTimeout(step, wait);
+  }
+  function setPlaying(on) {
+    clearTimeout(timer);
+    reader.classList.toggle('playing', on);
+    button.setAttribute('aria-pressed', on ? 'true' : 'false');
+    button.setAttribute('aria-label', (on ? 'Pause' : 'Play') + ' the highlighting illustration');
+    if (on) step();
+  }
+  button.hidden = false;
+  button.addEventListener('click', function () {
+    setPlaying(button.getAttribute('aria-pressed') !== 'true');
+  });
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    index = 0;
+    spans[0].classList.add('on');
+  } else {
+    setPlaying(true);
+  }
+})();
+</script>
+</body>
+</html>

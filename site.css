@@ -103,6 +103,7 @@ p { text-wrap: pretty; }
 .steps li::before { content: counter(step); font-family: var(--serif); font-size: 30px; line-height: 1; color: var(--accent); }
 
 /* App list on the studio page */
+.apps { display: grid; gap: 40px; }
 .app { display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; gap: 24px; align-items: center; color: var(--ink); text-decoration: none; }
 .app svg.icon { width: 72px; height: 72px; }
 .app h3 { font-size: 30px; line-height: 1.15; margin: 0 0 6px; }
